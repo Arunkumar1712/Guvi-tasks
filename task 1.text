@@ -1,0 +1,73 @@
+Understanding the Differences Between HTTP1.1 and HTTP2
+
+Introduction:
+
+In the fast-paced world of technology, the way we browse the internet has evolved significantly. 
+Among the many technological advancements, the transition from HTTP/1.1 to HTTP/2 has played a 
+crucial role in enhancing web performance. This blog aims to explore the key differences between 
+HTTP/1.1 and HTTP/2, shedding light on how these protocols impact the efficiency and speed of our 
+online experiences.
+
+******* HTTP1 : First Foundation for World wide web *******
+
+HTTP1.1, the venerable workhorse that has served as the foundation for the World Wide Web 
+for many years, has played a vital role in facilitating communication between web clients 
+and servers.
+
+///// One at a Time: /////
+
+One of the most significant drawbacks of HTTP/1.1 is its inherent limitation when it comes 
+to handling multiple requests simultaneously. Each request requires a separate connection, 
+leading to increased latency.
+Head-of-Line Blocking:
+
+
+In HTTP1.1, if one resource within a page is slow to load, it can cause a bottleneck and 
+delay the loading of other resources, a phenomenon known as head-of-line blocking.
+
+/////// Header Overhead: ////////
+
+HTTP1.1 carries significant header overhead, as headers must be resent with each new request,
+consuming bandwidth and leading to slower performance.
+
+***** HTTP 2: Evolution for Modern World *****
+
+In response to the shortcomings of HTTP 1.1, HTTP 2 emerged as a more efficient and performant 
+protocol. Developed by the Internet Engineering Task Force (IETF), HTTP/2 was designed to overcome
+the limitations of its predecessor and provide a faster, more responsive web experience.
+
+/////// Multiplexing: ///////
+
+HTTP 2 introduces multiplexing, allowing multiple requests and responses to be sent and received in
+parallel over a single connection. This significantly reduces latency, as it eliminates the need for 
+multiple connections for different resources.
+
+/////// Header Compression: ///////
+
+To address the issue of header overhead, HTTP/2 incorporates header compression. This minimizes redundant
+information in headers, reducing the amount of data that needs to be transmitted and improving overall 
+performance.
+
+/////// Server Push: ///////
+
+HTTP/2 introduces server push, a feature that allows the server to send resources to the client before they 
+are explicitly requested. This can lead to faster page loads, as essential resources are proactively delivered.
+
+////// Binary Protocol: ///////
+
+Unlike the plain text format of HTTP/1.1, HTTP/2 uses a binary protocol. This results in more efficient parsing 
+and reduces the likelihood of errors, contributing to enhanced performance.
+
+Conclusion:
+
+The transition from HTTP/1.1 to HTTP/2 represents a significant leap forward in optimizing the web for 
+the demands of today's internet users. With features like multiplexing, header compression, and server push,
+HTTP/2 provides a more efficient and responsive framework for delivering web content. As web technology 
+continues to advance, staying informed about these protocols is crucial for web developers, administrators,
+and users alike. Embracing HTTP/2 is not just an upgrade; it's a step towards a faster, more seamless online 
+experience.
+
+
+
+
+
