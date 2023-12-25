@@ -1,4 +1,4 @@
-// program to change the string to UpperCase Using anonymous function
+// program to change the string to UpperCase Using arrow function
 const readline = require("readline");
 
 const inp = readline.createInterface({
