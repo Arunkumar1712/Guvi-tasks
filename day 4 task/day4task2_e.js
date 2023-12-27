@@ -1,4 +1,4 @@
-//program to Return all the palindromes in an array  using anonymous functionn 
+//program to Return all the palindromes in an array  using arrow function
 const readline = require("readline");
 
 const inp = readline.createInterface({
