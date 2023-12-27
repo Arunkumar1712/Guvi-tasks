@@ -13,7 +13,7 @@ inp.on("line", (data) => {
 });
 
 inp.on("close", () => {
-    var a= userInput[0];               // Taking Input from the user as string in array format
+    var a= userInput[0];               //  Taking Input from the user as string in array format
     var upper = function(a){           // declaring the variable upper to store the anonymous function
     console.log(a.toUpperCase());      // It log the output in console by converting the string to uppercase by using In built function "toUpperCase"
     }
