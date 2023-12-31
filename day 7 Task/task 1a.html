@@ -1,0 +1,56 @@
+
+
+<html>
+
+<head>
+    <title>XML HTTP Request Example</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    This is for XML parsing
+
+    <script>
+        // Creating an XMLHttpRequest object
+        const xhr = new XMLHttpRequest();
+
+        // Define the URL to which the request will be sent
+        const url = 'https://restcountries.com/v3.1/all'; // Replace with your API endpoint
+
+        // This function is called whenever the state of the XMLHttpRequest changes
+        xhr.onreadystatechange = function () {
+            // XMLHttpRequest.DONE means the operation is complete
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                // Check if the request was successful (status code 200)
+                if (xhr.status === 200) {
+                    // Parse the JSON response
+                    const response = JSON.parse(xhr.responseText);
+                    // Call a function to display the data
+                const abs = response.filter((item)=>{    // we try to filter out json that are in Asia region
+                    if(item.continents[0] === "Asia"){   // it checks wheather this continent is Asia or not
+                        return true                      // so return that region
+                    }
+                    
+                })
+                console.log(abs);                        // calling the the function abs
+
+                } else {
+                    // Log an error message if the request fails
+                    console.error('There was a problem with the request.');
+                }
+                
+            }
+           
+        };
+
+        // Open a connection with the server
+        xhr.open('GET', url, true); // Parameters: method, URL, asynchronous (true/false)
+
+        // Send the request
+        xhr.send(); // For POST requests, you can pass data as an argument to send()
+
+    </script>
+</body>
+
+</html>
