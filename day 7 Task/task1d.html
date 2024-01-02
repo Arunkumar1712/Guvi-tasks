@@ -27,15 +27,15 @@
                     // Parse the JSON response
                     const response = JSON.parse(xhr.responseText);
                     // Call a function to display the data
-                    let abs=[];                   // declaring the variable to store array
-                    response.forEach((item)=>{    // we try to iterate through json 
-                    abs.push({                    // we are pushing the name,capital,flags to the abs array
-                       name: item.name.common,
-                       Capital:item.capital,
-                       Flags:item.flags
-                    })
+                    const abbs = response.filter((item)=>{              // we try to filter out json to get country using Usd as currency
+                    return item.currencies && item.currencies.USD;      // we check that currencies property is there or not and further
+                })                                                      // checks in that usd is there or not if both are correct it return true and stores in abbs function
+                console.log(abbs);                                      // calling the function and it shows the array of country all property
+                
+                let ans = abbs.map((item)=>{                            //we declare another variable to store name of the country using map function
+                  return (`${item.name.common}`);                       // it returns the name alone to variable ans
                 })
-                console.log(abs);                        // calling the the function abs
+                console.log(ans)                                        // printing the names of the countries
 
                 } else {
                     // Log an error message if the request fails
