@@ -1,0 +1,143 @@
+.cl{
+    color: black;
+    text-size-adjust: 20px;
+    margin-top: 5px;
+    margin-left: 9px;
+    font-weight: bold;
+}
+.as{
+    color: red;
+}
+.row g-3{
+    margin-top: 5px;
+    margin-left: 10px;
+    
+}
+.col-4{
+    border-radius:0px;
+    margin-left: 10px;
+}
+label{
+    margin-left: 3px;
+}
+.col-md-6{
+    margin-left: 10px;
+}
+.form-control{
+    border-radius: 0%;
+}
+.cl1{
+    margin-left: 10px; 
+}
+.cl1:hover i{
+    color:red;
+    
+}
+.bi.bi-star-fill{
+    color:orange;
+}
+.fd{
+    display:flex;
+    justify-content: space-around;
+    margin-left: 250px;
+}
+.form-check-input{
+    border-color: black;
+}
+.review{
+    height: 40px;
+    width: auto;
+    background-color: rgb(197, 197, 204);
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    border-radius: 10px;
+    margin-left:30px;
+    margin-right: 50px;
+}
+#second{
+   background-color:white;
+}
+.pr{
+    margin-left: 10px;
+}
+#inlineCheckbox{
+    margin-left: 30px;
+}
+#inlineCheckbox1{
+    margin-left: 30px;
+}
+#inlineCheckbox11{
+    margin-left: 45px;
+}
+#inlineCheckbox12{
+    margin-left: 30px;
+}
+#inlineCheckbox13{
+   margin-right: 50px;
+   margin-left: -30px;
+}
+#inlineCheckbox14{
+    margin-left:-20px;
+ }
+#inlineCheckbox2{
+    margin-left: 30px;
+}
+#inlineCheckbox22{
+    margin-left:28px;
+}
+
+#inlineCheckbox32{
+    margin-right: 4px;
+}
+#inlineCheckbox23{
+    margin-left:25px;
+}
+#inlineCheckbox33{
+    margin-right:-25px;
+}
+#inlineCheckbox4{
+    margin-right: 50px;
+}
+.col{
+    margin-left: 700px;
+   justify-content: center;
+    align-content: center;
+    
+}
+.container1{
+    margin-top:10px ;
+    height:50px;
+    width:auto;
+    margin-right: 50px;
+    margin-left: 30px;
+    background-color:rgb(197, 197, 204) ;
+    justify-content:space-evenly;
+    align-items: center;
+    border-radius: 10px;
+
+}
+.col-1{
+    margin-top: 8px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    
+}
+#box{
+    margin-left: 100px;
+    margin-top: 12px;
+}
+#con2{
+    background-color: white;
+}
+#space{
+    margin:auto;
+}
+.gr{
+    
+    
+    margin-left:30px;
+    margin-right: 30px;
+   
+}
