@@ -1,0 +1,66 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+#title{
+    margin-top: 50px;
+    justify-content: center;
+    color: grey;
+}
+/* body{
+    margin-top: 20px;
+    display:contents;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    background-color: hsl(0, 0%, 95%);
+} */
+#calculator{
+    margin-left:20%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: hsl(0, 0%, 15%);
+    border-radius: 15px;
+    max-width: 500px;
+    overflow:hidden;
+}
+.display{
+    width: 100%;
+    padding: 20px;
+    font-size: 3rem;
+    text-align: left;
+    border: none;
+    color: white;
+    background-color:hsl(0, 0%, 75%) ;
+
+}
+#keys{
+    margin-left: 2px;
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:5px;
+    padding: 10px;
+}
+button{
+    width: 80px;
+    height: 80px;;
+    border-radius: 50px;
+    border: none;
+    background-color: grey;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+#equal{
+background-color:orange;
+}
+button:hover{
+    background-color: hsl(0, 0%, 65%);
+}
+.oparator-btn{
+    background-color:rgb(92, 90, 90);
+}
+.oparator-btn:hover{
+    background-color:  rgb(224, 196, 144);
+}
+.oparator-btn:active{
+    background-color:  rgb(224, 196, 144);
+}

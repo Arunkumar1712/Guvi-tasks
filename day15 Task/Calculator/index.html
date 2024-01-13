@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <h1 id="title">Calculator</h1>
+    <div id="calculator">
+        <input class="display" id="result" readonly>
+        <div id="keys">
+            <button onclick="clearDisplay()" class="oparator-btn" id="clear">C</button>
+            <button onclick="appendToDisplay('%')" class="oparator-btn">%</button>
+            <!-- <button onclick="cl()" id="cl" class="oparator-btn"><i class="bi bi-backspace"></i></button> -->
+            <button onclick="appendToDisplay('+')" class="oparator-btn" id="add">+</button>
+            <button onclick="appendToDisplay('*')" class="oparator-btn">*</button>
+
+            <button onclick="appendToDisplay('7')" id="7">7</button>
+            <button onclick="appendToDisplay('8')" id="8">8</button>
+            <button onclick="appendToDisplay('9')" id="9">9</button>
+            <button onclick="appendToDisplay('-')" class="oparator-btn" id="subtract">-</button>
+
+            <button onclick="appendToDisplay('4')" id="4">4</button>
+            <button onclick="appendToDisplay('5')" id="5">5</button>
+            <button onclick="appendToDisplay('6')" id="6">6</button>
+            <button onclick="appendToDisplay('1')" id="1">1</button>
+            <button onclick="appendToDisplay('2')" id="2">2</button>
+            <button onclick="appendToDisplay('3')" id="3">3</button>
+            <button onclick="appendToDisplay('0')" id="0">0</button>
+            <button onclick="calculate()" id="equal">=</button>
+
+            <button onclick="appendToDisplay('00')" id="00">00</button>
+            <button onclick="appendToDisplay('.')">.</button>
+        </div>
+    </div>
+
+
+
+    <script src="./script.js"></script>
+    <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+    <p id="description">In this task I created 18 buttons and it takes input from the user and performs calculations</p>
+</body>
+
+</html>
