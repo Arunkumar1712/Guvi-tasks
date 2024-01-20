@@ -1,0 +1,32 @@
+body {
+    height: 100vh;
+    background-color: #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkRt0CHBYCSZ336hRNJ7dCUu1XGk1A01BkCQ&usqp=CAU");
+}
+
+#add{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Pacifico', cursive;
+    font-weight:bolder;
+    text-indent: 50px;
+    font-size:50px;
+    position: relative;
+    margin-top: -100px;
+}
+img{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    margin-top: -400px;
+
+
+}
