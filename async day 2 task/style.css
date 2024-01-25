@@ -1,0 +1,42 @@
+#navbar{
+    background-color:rgb(87, 85, 85) ;
+    font-family: 'Lobster', sans-serif;
+    text-align: center;
+    height:45px;
+}
+#body{
+    background-color:  #d3d3d3;
+}
+#textinnav{
+    color:white;
+}
+.card-body{
+    text-align: center;
+}
+
+.container{
+    margin-top: 20px;
+    
+    width: fit-content;
+
+}
+.row{
+    display: flex;
+    justify-content: space-evenly;
+}
+#title{
+    font-family: 'Lobster', sans-serif;
+    font-size: larger;
+}
+#country-details{
+    margin-top: 20px;
+}
+.card{
+    margin-top: 20px;
+    position: relative;
+    background-color: rgb(186, 216, 213);
+}
+#card-header{
+    /* background-color:rgb(176, 183, 185); */
+    font-weight: bold;
+}
