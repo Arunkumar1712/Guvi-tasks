@@ -1,4 +1,36 @@
-# Getting Started with Create React App
+# Getting Started with Shooping cart React App
+1.Navbar Component:
+
+Displays the navigation bar with the brand logo, navigation links, and cart button.
+The cart button displays the current number of items in the cart.
+2.App Component:
+
+Manages the main application state, including the cart count.
+Renders the Navbar, Section, and Footer components.
+Iterates over the data array to render individual product sections.
+
+3.Section Component:
+
+Displays individual product cards with product details such as name, price, and optional sale badge.
+Contains an "Add to Cart" button for each product.
+Clicking the "Add to Cart" button increments the cart count by 1.
+For items with the "View options" button, clicking does not affect the cart count.
+
+4.Footer Component:
+
+Displays the footer section with copyright information.
+
+5.State Management:
+
+Uses React's useState hook to manage the cart count state.
+The cart count state is passed down as a prop to the Navbar and Section components to display the updated count.
+Clicking the "Add to Cart" button in the Section component updates the cart count state in the App component, reflecting the changes in the Navbar.
+
+Overall, the app allows users to browse products, add them to the cart, and view the total number of items in the cart dynamically.
+
+
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
