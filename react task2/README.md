@@ -1,4 +1,5 @@
 # Getting Started with Shooping cart React App
+Deployed URl:"https://65cba21a665dc80ca6892aa5--unrivaled-eclair-25c375.netlify.app/"
 1.Navbar Component:
 
 Displays the navigation bar with the brand logo, navigation links, and cart button.
