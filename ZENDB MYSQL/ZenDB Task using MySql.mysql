@@ -1,0 +1,188 @@
+-- Create Database
+CREATE DATABASE zen_class_db;
+
+-- Use the Database
+USE zen_class_db;
+
+-- Create Tables:
+
+-- Users Table
+CREATE TABLE users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(100) NOT NULL,
+    role ENUM('student', 'teacher', 'admin') NOT NULL
+);
+
+-- Insert Dummy Data for Users
+INSERT INTO users (username, email, password, role) VALUES
+('student1', 'student1@example.com', 'password123', 'student'),
+('student2', 'student2@example.com', 'password456', 'student'),
+('teacher1', 'teacher1@example.com', 'password789', 'teacher'),
+('teacher2', 'teacher2@example.com', 'passwordabc', 'teacher'),
+('admin', 'admin@example.com', 'adminpassword', 'admin');
+
+Output:
+
++---------+----------+----------------------+---------------+---------+
+| user_id | username | email                | password      | role    |
++---------+----------+----------------------+---------------+---------+
+|       1 | student1 | student1@example.com | password123   | student |
+|       2 | student2 | student2@example.com | password456   | student |
+|       3 | teacher1 | teacher1@example.com | password789   | teacher |
+|       4 | teacher2 | teacher2@example.com | passwordabc   | teacher |
+|       5 | admin    | admin@example.com    | adminpassword | admin   |
++---------+----------+----------------------+---------------+---------+
+
+-- Mentors Table
+CREATE TABLE mentors (
+    mentor_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT UNIQUE,
+    bio TEXT,
+    experience_years INT,
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
+
+-- Insert Dummy Data for Mentors
+INSERT INTO mentors (user_id, bio, experience_years) VALUES
+(3, 'Experienced teacher specializing in mathematics.', 10),
+(4, 'Passionate educator with expertise in computer science.', 8);
+
+Output:
+
++-----------+---------+---------------------------------------------------------+------------------+
+| mentor_id | user_id | bio                                                     | experience_years |
++-----------+---------+---------------------------------------------------------+------------------+
+|         1 |       3 | Experienced teacher specializing in mathematics.        |               10 |
+|         2 |       4 | Passionate educator with expertise in computer science. |                8 |
++-----------+---------+---------------------------------------------------------+------------------+
+
+-- Courses Table
+CREATE TABLE courses (
+    course_id INT AUTO_INCREMENT PRIMARY KEY,
+    course_name VARCHAR(100) NOT NULL,
+    description TEXT,
+    mentor_id INT,
+    FOREIGN KEY (mentor_id) REFERENCES mentors(mentor_id)
+);
+
+-- Insert Dummy Data for Courses
+INSERT INTO courses (course_name, description, mentor_id) VALUES
+('Mathematics 101', 'Introduction to basic mathematical concepts.', 1),
+('Computer Science Fundamentals', 'Learn the basics of programming and computer science.', 2);
+
+Output:
+
++-----------+-------------------------------+-------------------------------------------------------+-----------+
+| course_id | course_name                   | description                                           | mentor_id |
++-----------+-------------------------------+-------------------------------------------------------+-----------+
+|         1 | Mathematics 101               | Introduction to basic mathematical concepts.          |         1 |
+|         2 | Computer Science Fundamentals | Learn the basics of programming and computer science. |         2 |
++-----------+-------------------------------+-------------------------------------------------------+-----------+
+
+-- Enrollments Table
+CREATE TABLE enrollments (
+    enrollment_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    course_id INT,
+    enrollment_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(user_id),
+    FOREIGN KEY (course_id) REFERENCES courses(course_id),
+    UNIQUE KEY (user_id, course_id)
+);
+
+-- Insert Dummy Data for Enrollments
+INSERT INTO enrollments (user_id, course_id) VALUES
+(1, 1),
+(2, 2),
+(1, 2);
+
+Output:
+
++---------------+---------+-----------+---------------------+
+| enrollment_id | user_id | course_id | enrollment_date     |
++---------------+---------+-----------+---------------------+
+|             1 |       1 |         1 | 2024-03-17 16:11:06 |
+|             2 |       2 |         2 | 2024-03-17 16:11:06 |
+|             3 |       1 |         2 | 2024-03-17 16:11:06 |
++---------------+---------+-----------+---------------------+
+
+
+-- Lessons Table
+CREATE TABLE lessons (
+    lesson_id INT AUTO_INCREMENT PRIMARY KEY,
+    course_id INT,
+    lesson_title VARCHAR(100) NOT NULL,
+    lesson_content TEXT,
+    lesson_order INT,
+    FOREIGN KEY (course_id) REFERENCES courses(course_id)
+);
+
+-- Insert Dummy Data for Lessons
+INSERT INTO lessons (course_id, lesson_title, lesson_content, lesson_order) VALUES
+(1, 'Introduction to Algebra', 'This lesson covers basic algebraic concepts.', 1),
+(1, 'Geometry Basics', 'Learn about shapes, angles, and measurements.', 2),
+(2, 'Introduction to Programming', 'Learn the fundamentals of programming languages.', 1),
+(2, 'Data Structures', 'Explore common data structures used in computer science.', 2);
+
+Output:
+
++-----------+-----------+-----------------------------+----------------------------------------------------------+--------------+
+| lesson_id | course_id | lesson_title                | lesson_content                                           | lesson_order |
++-----------+-----------+-----------------------------+----------------------------------------------------------+--------------+
+|         1 |         1 | Introduction to Algebra     | This lesson covers basic algebraic concepts.             |            1 |
+|         2 |         1 | Geometry Basics             | Learn about shapes, angles, and measurements.            |            2 |
+|         3 |         2 | Introduction to Programming | Learn the fundamentals of programming languages.         |            1 |
+|         4 |         2 | Data Structures             | Explore common data structures used in computer science. |            2 |
++-----------+-----------+-----------------------------+----------------------------------------------------------+--------------+
+
+-- Assignments Table
+CREATE TABLE assignments (
+    assignment_id INT AUTO_INCREMENT PRIMARY KEY,
+    course_id INT,
+    assignment_title VARCHAR(100) NOT NULL,
+    assignment_description TEXT,
+    deadline DATETIME,
+    FOREIGN KEY (course_id) REFERENCES courses(course_id)
+);
+
+-- Insert Dummy Data for Assignments
+INSERT INTO assignments (course_id, assignment_title, assignment_description, deadline) VALUES
+(1, 'Algebra Quiz', 'A quiz to test understanding of algebraic concepts.', '2024-03-20 23:59:59'),
+(2, 'Programming Project', 'Create a simple program using the concepts learned in class.', '2024-03-25 23:59:59');
+
+Output:
+
++---------------+-----------+---------------------+--------------------------------------------------------------+---------------------+
+| assignment_id | course_id | assignment_title    | assignment_description                                       | deadline            |
++---------------+-----------+---------------------+--------------------------------------------------------------+---------------------+
+|             1 |         1 | Algebra Quiz        | A quiz to test understanding of algebraic concepts.          | 2024-03-20 23:59:59 |
+|             2 |         2 | Programming Project | Create a simple program using the concepts learned in class. | 2024-03-25 23:59:59 |
++---------------+-----------+---------------------+--------------------------------------------------------------+---------------------+
+
+
+
+-- Submissions Table
+CREATE TABLE submissions (
+    submission_id INT AUTO_INCREMENT PRIMARY KEY,
+    assignment_id INT,
+    user_id INT,
+    submission_content TEXT,
+    submission_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (assignment_id) REFERENCES assignments(assignment_id),
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
+-- Insert Dummy Data for Submissions
+INSERT INTO submissions (assignment_id, user_id, submission_content) VALUES
+(1, 1, 'Answers to algebra quiz questions.'),
+(2, 2, 'Source code for programming project.');
+
+Output:
+
++---------------+---------------+---------+--------------------------------------+---------------------+
+| submission_id | assignment_id | user_id | submission_content                   | submission_date     |
++---------------+---------------+---------+--------------------------------------+---------------------+
+|             1 |             1 |       1 | Answers to algebra quiz questions.   | 2024-03-17 16:15:29 |
+|             2 |             2 |       2 | Source code for programming project. | 2024-03-17 16:15:29 |
++---------------+---------------+---------+--------------------------------------+---------------------+

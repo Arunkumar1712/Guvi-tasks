@@ -1,0 +1,63 @@
+A database schema for a fictional educational platform called “Zen Class.” 
+Let’s break down the structure and purpose of each table:
+this compelete table is created using Mysql
+
+1. users Table:
+Stores information about users (students, teachers, and admins).
+Columns:
+      user_id: Unique identifier for each user.
+      username: User’s username.
+      email: User’s email address (unique).
+      password: User’s password (hashed and secure).
+      role: User’s role (student, teacher, or admin).
+
+2. mentors Table:
+Contains details about mentors (teachers).
+Columns:
+        mentor_id: Unique identifier for each mentor.
+        user_id: Foreign key referencing the corresponding user in the users table.
+        bio: Mentor’s biography or description.
+        experience_years: Number of years of teaching experience.
+
+3.courses Table:
+Represents the available courses.
+Columns:
+        course_id: Unique identifier for each course.
+        course_name: Name of the course.
+        description: Description of the course content.
+        mentor_id: Foreign key referencing the mentor responsible for the course.
+
+4.enrollments Table:
+Tracks user enrollments in specific courses.
+Columns:
+        enrollment_id: Unique identifier for each enrollment.
+        user_id: Foreign key referencing the user enrolled.
+        course_id: Foreign key referencing the course enrolled.
+        enrollment_date: Timestamp indicating when the enrollment occurred.
+
+5. lessons Table:
+Represents individual lessons within a course (not fully defined in your provided snippet).
+Columns:
+        lesson_id: Unique identifier for each lesson.
+        course_id: Foreign key referencing the course to which the lesson belongs.
+        lesson_title: Title or name of the lesson.
+
+6. assignments Table:
+Stores information about assignments for various courses.
+Columns:
+        assignment_id: Unique identifier for each assignment.
+        course_id: Foreign key referencing the course to which the assignment belongs.
+        assignment_title: Title or name of the assignment.
+        assignment_description: Description of the assignment.
+        deadline: Deadline for submitting the assignment.
+
+7. submissions Table:
+Tracks user submissions for specific assignments.
+Columns:
+        submission_id: Unique identifier for each submission.
+        assignment_id: Foreign key referencing the assignment for which the submission is made.
+        user_id: Foreign key referencing the user who submitted the assignment.
+        submission_content: Content of the submission (answers, code, etc.).
+        submission_date: Timestamp indicating when the submission was made.
+
+This schema allows you to manage assignments, track submissions, and enforce deadlines. 
