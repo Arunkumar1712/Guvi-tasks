@@ -1,0 +1,45 @@
+[{
+  "_id": {
+    "$oid": "65f83d5284ad52ce89a1b940"
+  },
+  "user_id": 1,
+  "present": true,
+  "topic_taken": "HTML",
+  "mentor_id": 1
+},
+{
+  "_id": {
+    "$oid": "65f83d5284ad52ce89a1b941"
+  },
+  "user_id": 2,
+  "present": true,
+  "topic_taken": "CSS",
+  "mentor_id": 1
+},
+{
+  "_id": {
+    "$oid": "65f83d5284ad52ce89a1b942"
+  },
+  "user_id": 3,
+  "present": false,
+  "topic_taken": "JavaScript",
+  "mentor_id": 2
+},
+{
+  "_id": {
+    "$oid": "65f83d5284ad52ce89a1b943"
+  },
+  "user_id": 4,
+  "present": false,
+  "topic_taken": "React",
+  "mentor_id": 2
+},
+{
+  "_id": {
+    "$oid": "65f83d5284ad52ce89a1b944"
+  },
+  "user_id": 5,
+  "present": false,
+  "topic_taken": "Node.js",
+  "mentor_id": 3
+}]

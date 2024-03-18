@@ -1,0 +1,24 @@
+[{
+  "_id": {
+    "$oid": "65f83dd684ad52ce89a1b946"
+  },
+  "mentorid": 1,
+  "name": "John Doe",
+  "specialization": "HTML/CSS"
+},
+{
+  "_id": {
+    "$oid": "65f83dd684ad52ce89a1b947"
+  },
+  "mentorid": 2,
+  "name": "Jane Smith",
+  "specialization": "JavaScript/React"
+},
+{
+  "_id": {
+    "$oid": "65f83dd684ad52ce89a1b948"
+  },
+  "mentorid": 3,
+  "name": "Alex Johnson",
+  "specialization": "Node.js/Express"
+}]

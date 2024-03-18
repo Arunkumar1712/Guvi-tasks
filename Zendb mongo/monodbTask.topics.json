@@ -1,0 +1,40 @@
+[{
+  "_id": {
+    "$oid": "65f83fe984ad52ce89a1b950"
+  },
+  "topic": "HTML",
+  "date_taken": "2024-10-05",
+  "mentor_id": 1
+},
+{
+  "_id": {
+    "$oid": "65f83fe984ad52ce89a1b951"
+  },
+  "topic": "CSS",
+  "date_taken": "2024-10-10",
+  "mentor_id": 1
+},
+{
+  "_id": {
+    "$oid": "65f83fe984ad52ce89a1b952"
+  },
+  "topic": "JavaScript",
+  "date_taken": "2024-10-15",
+  "mentor_id": 2
+},
+{
+  "_id": {
+    "$oid": "65f83fe984ad52ce89a1b953"
+  },
+  "topic": "React",
+  "date_taken": "2024-10-20",
+  "mentor_id": 2
+},
+{
+  "_id": {
+    "$oid": "65f83fe984ad52ce89a1b954"
+  },
+  "topic": "Node.js",
+  "date_taken": "2024-10-25",
+  "mentor_id": 3
+}]

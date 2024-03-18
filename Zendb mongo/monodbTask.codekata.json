@@ -1,0 +1,88 @@
+[{
+  "_id": {
+    "$oid": "65f83c4f84ad52ce89a1b92b"
+  },
+  "userid": 1,
+  "problems_solved": 10,
+  "topics": [
+    "HTML",
+    "CSS"
+  ]
+},
+{
+  "_id": {
+    "$oid": "65f83c4f84ad52ce89a1b92c"
+  },
+  "userid": 2,
+  "problems_solved": 8,
+  "topics": [
+    "HTML",
+    "CSS"
+  ]
+},
+{
+  "_id": {
+    "$oid": "65f83c4f84ad52ce89a1b92d"
+  },
+  "userid": 3,
+  "problems_solved": 12,
+  "topics": [
+    "JavaScript",
+    "React"
+  ]
+},
+{
+  "_id": {
+    "$oid": "65f83c4f84ad52ce89a1b92e"
+  },
+  "userid": 4,
+  "problems_solved": 7,
+  "topics": [
+    "JavaScript",
+    "React"
+  ]
+},
+{
+  "_id": {
+    "$oid": "65f83c4f84ad52ce89a1b92f"
+  },
+  "userid": 5,
+  "problems_solved": 15,
+  "topics": [
+    "JavaScript",
+    "Node.js"
+  ]
+},
+{
+  "_id": {
+    "$oid": "65f83c4f84ad52ce89a1b930"
+  },
+  "userid": 6,
+  "problems_solved": 9,
+  "topics": [
+    "HTML",
+    "CSS"
+  ]
+},
+{
+  "_id": {
+    "$oid": "65f83c4f84ad52ce89a1b931"
+  },
+  "userid": 7,
+  "problems_solved": 11,
+  "topics": [
+    "JavaScript",
+    "Node.js"
+  ]
+},
+{
+  "_id": {
+    "$oid": "65f83c4f84ad52ce89a1b932"
+  },
+  "userid": 8,
+  "problems_solved": 6,
+  "topics": [
+    "HTML",
+    "CSS"
+  ]
+}]

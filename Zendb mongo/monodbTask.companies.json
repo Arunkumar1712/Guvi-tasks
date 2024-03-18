@@ -1,0 +1,45 @@
+[{
+  "_id": {
+    "$oid": "65f83df284ad52ce89a1b94a"
+  },
+  "userid": 1,
+  "company": "Google",
+  "date": "2024-03-17",
+  "selected": true
+},
+{
+  "_id": {
+    "$oid": "65f83df284ad52ce89a1b94b"
+  },
+  "userid": 2,
+  "company": "Facebook",
+  "date": "2024-03-17",
+  "selected": false
+},
+{
+  "_id": {
+    "$oid": "65f83df284ad52ce89a1b94c"
+  },
+  "userid": 3,
+  "company": "Amazon",
+  "date": "2024-03-17",
+  "selected": false
+},
+{
+  "_id": {
+    "$oid": "65f83df284ad52ce89a1b94d"
+  },
+  "userid": 4,
+  "company": "Microsoft",
+  "date": "2024-03-17",
+  "selected": true
+},
+{
+  "_id": {
+    "$oid": "65f83df284ad52ce89a1b94e"
+  },
+  "userid": 5,
+  "company": "Apple",
+  "date": "2024-03-17",
+  "selected": false
+}]
